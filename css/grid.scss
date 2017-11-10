@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/*--Clearing the row div---*/
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*Grids*/
+@for $i from 1 through 12 {
+  $width: percentage(1/12) * $i;
+  .col-g-#{$i} {
+    width: $width;
+   }
+}
